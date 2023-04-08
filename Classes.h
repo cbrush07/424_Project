@@ -4,7 +4,9 @@
 #include "VendMachGrid.h"
 using namespace std;
 
-class Snack
+// This struct defines the snacks to be stored in the vending machine
+// giving each a name, cost, cost in dollars, and flavor
+struct Snack
 {
 public:
 
@@ -15,7 +17,9 @@ public:
 	
 };
 
-class Drink
+// This struct defines the snacks to be stored in the vending machine
+// giving each a name, cost, cost in dollars, and flavor
+struct Drink
 {
 public:
 	
