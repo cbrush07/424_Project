@@ -13,15 +13,20 @@ using namespace std;
 
 #define VendingMachine array<array<string, 4>, 6 >
 
+// This class deines the Vending Machine object used in this program
 class MyClass {
+
 public:
 	void create_snacks();
 	void print_vendingmachine(VendingMachine v);
+
 private:
 	Drink A1, C1, C2, C3, E1;
 	Snack A2, A3, B1, B2, B3, D1, D2, D3, E2, E3;
 };
 
+// This function defines each cell in the Vending Machine and
+// defines a name, cost, price amount, and flavor for each snack and drink
 void MyClass::create_snacks()
 {
 	
@@ -114,6 +119,9 @@ void MyClass::create_snacks()
 	this-> E3.Cost4Org = "$1.00";
 	this-> E3.Flavor = "Milk Chocolate";
 };
+
+// This function gets passed the Vending Machine object and
+// outputs the contents and price of objects within the Vending Machine
 void MyClass::print_vendingmachine(VendingMachine v)
 {
 	v[0][0] = " ";
