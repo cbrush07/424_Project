@@ -34,19 +34,17 @@ public:
 class VendingMachine
 {
 public:
-	bool on;
+
 	void restock();
-	bool isValid(string in);
-	
-	//Recreate this funciton with templates for drink and snack
-	template<typename T>
-	T get_item(string in);
+	void interface();
+	double moneyCalc(string loc, double money);
+	bool keepRunning(string again);
 
 	friend ostream& operator<<(ostream& os, VendingMachine vm);
 
 protected:
 	VendingMachineGrid v;
-	
+
 	Drink A1, C1, C2, C3, E1;
 	Snack A2, A3, B1, B2, B3, D1, D2, D3, E2, E3;
 

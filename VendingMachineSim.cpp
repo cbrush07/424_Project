@@ -99,33 +99,398 @@ void VendingMachine::restock()
 	this->v[4][0] = "D";
 	this->v[5][0] = "E";
 
-	on == true;
 }
 
-bool VendingMachine::isValid(string in)
+double VendingMachine::moneyCalc(string loc, double money)
 {
-	if (in == "A1" || in == "A2" || in == "A3" || in == "B1" || in == "B2" || in == "B3"
-		|| in == "C1" || in == "C2" || in == "C3" || in == "D1" || in == "D2" || in == "D3"
-		|| in == "E1" || in == "E2" || in == "E3")
-		return true;
-	else
+	double add; // creating an empty variable to add yo our inserted money value later
+	double change = 0; // creating an empty double for the change
+	
+	if (loc == "A1")
 	{
-		cout << "This input is Invalid :( .\nPlease type in a character (A-E) followed by a number (1-3)\n";
-		return false;
+		while (money < A1.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - A1.Cost; // returns the change to the user
 	}
+	else if (loc == "A2")
+	{
+		while (money < A2.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - A2.Cost; // returns the change to the user
+	}
+	else if (loc == "A3")
+	{
+		while (money < A3.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - A3.Cost; // returns the change to the user
+	}
+	else if (loc == "B1")
+	{
+		while (money < B1.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - B1.Cost; // returns the change to the user
+	}
+	else if (loc == "B2")
+	{
+		while (money < B2.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - B2.Cost; // returns the change to the user
+	}
+	else if (loc == "B3")
+	{
+		while (money < B3.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - B3.Cost; // returns the change to the user
+	}
+	else if (loc == "C1")
+	{
+		while (money < C1.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - C1.Cost; // returns the change to the user
+	}
+	else if (loc == "C2")
+	{
+		while (money < C2.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - C2.Cost; // returns the change to the user
+	}
+	else if (loc == "C3")
+	{
+		while (money < C3.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - C3.Cost; // returns the change to the user
+	}
+	else if (loc == "D1")
+	{
+		while (money < D1.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - D1.Cost; // returns the change to the user
+	}
+	else if (loc == "D2")
+	{
+		while (money < D2.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - D2.Cost; // returns the change to the user
+	}
+	else if (loc == "D3")
+	{
+		while (money < D3.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - D3.Cost; // returns the change to the user
+	}
+	else if (loc == "E1")
+	{
+		while (money < E1.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - E1.Cost; // returns the change to the user
+	}
+	else if (loc == "E2")
+	{
+		while (money < E2.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - E2.Cost; // returns the change to the user
+	}
+	else if (loc == "E3")
+	{
+		while (money < E3.Cost) // while the value of money is less than the cost of the item
+		{
+			cout << "Please insert more money: "; // we are adding aditional money
+			cin >> add;
+			money = money + add; // and reseting money to the new value of all money inserted so far
+		}
+		change = money - E3.Cost; // returns the change to the user
+	}
+
+	return change;
 }
 
-template<typename T>
-inline T VendingMachine::get_item(string in)
+bool VendingMachine::keepRunning(string again)
+{
+	bool run = true;
+	do
+	{
+		if (again == "Y")
+			run = true;
+		else if (again == "N")
+			run = false;  // if the bool check is false the do/while loop is cut 
+		else 
+		{
+			cout << "\nUh oh, something went wrong. would you like to order another item? (Y/N): ";
+			cin >> again;
+		}
+	} while (again != "Y" && again != "N");
+	
+	return run;
+}
+
+
+void VendingMachine:: interface()
 {
 
-	T item;
-	item.Name = v[row][col];
-	item.Cost = (row < 3) ? 1.25 : 1.50;
-	item.Cost4Org = (row < 3) ? "$1.25" : "$1.50";
+	string Location;  // creating a string of our location 
+	double money;  // creating a holder for the money required by the vending machine
+	string again;
 
-	return item;
-}
+	bool check = true;
+	cout << "Welcome to the vending Machine! Please select the snack you would like: ";
+	cin >> Location; // assigning the input as the location 
+	do
+	{
+		if (Location == "A1")
+		{
+
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+			
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << A1.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+
+		// from here on everything is the same as the above example, just a new location.
+		else if (Location == "A2")
+		{
+			cout << "Please insert money: ";
+			cin >> money;
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << A2.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "A3")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << A3.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "B1")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << B1.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "B2")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << B2.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "B3")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << B3.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "C1")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << C1.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "C2")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << C2.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "C3")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << C3.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "D1")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << D1.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "D2")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << A1.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "D3")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << D3.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "E1")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << E1.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "E2")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << E2.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else if (Location == "E3")
+		{
+			cout << "Please insert money: ";
+			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			double change = moneyCalc(Location, money);
+
+			cout << "Here is your change: " << to_string(change) << " Enjoy your " << E3.Name << endl;
+			cout << "Would you like to order another item? (Y/N): ";
+			cin >> again;
+			check = keepRunning(again);
+		}
+		else  // if the input isn't the location of anything, it is requiring a re-entry
+		{
+			cout << "\nThis input is Invalid :( .Please type in a character (A-E) followed by a number (1-3): ";
+			cin >> Location; // reasigning the string location
+		}
+
+		if (check)
+		{
+			money = 0;
+			cout << "Welcome to the vending Machine! Please select the snack you would like: ";
+			cin >> Location;
+		}
+
+	} while (check); // allows the if, if else, else to repeat until the input is correct. 
+};
+
 
 ostream& operator<<(ostream& os, VendingMachine vm)
 {
