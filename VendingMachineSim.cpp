@@ -101,6 +101,11 @@ void VendingMachine::restock()
 
 }
 
+void VendingMachine::moneyCheck(double money)
+{
+	
+}
+
 double VendingMachine::moneyCalc(string loc, double money)
 {
 	double add; // creating an empty variable to add yo our inserted money value later
@@ -112,6 +117,7 @@ double VendingMachine::moneyCalc(string loc, double money)
 		{
 			cout << "Please insert more money: "; // we are adding aditional money
 			cin >> add;
+
 			money = money + add; // and reseting money to the new value of all money inserted so far
 		}
 		change = money - A1.Cost; // returns the change to the user
@@ -285,9 +291,10 @@ void VendingMachine:: interface()
 
 	string Location;  // creating a string of our location 
 	double money;  // creating a holder for the money required by the vending machine
+	//string moneyCheck;
 	string again;
 
-	bool check = true;
+	bool check = false;
 	cout << "Welcome to the vending Machine! Please select the snack you would like: ";
 	cin >> Location; // assigning the input as the location 
 	do
@@ -297,7 +304,14 @@ void VendingMachine:: interface()
 
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
-			
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
+
 			double change = moneyCalc(Location, money);
 
 			cout << "Here is your change: " << to_string(change) << " Enjoy your " << A1.Name << endl;
@@ -312,6 +326,14 @@ void VendingMachine:: interface()
 			cout << "Please insert money: ";
 			cin >> money;
 
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
+
 			double change = moneyCalc(Location, money);
 
 			cout << "Here is your change: " << to_string(change) << " Enjoy your " << A2.Name << endl;
@@ -323,6 +345,14 @@ void VendingMachine:: interface()
 		{
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
 
 			double change = moneyCalc(Location, money);
 
@@ -336,6 +366,14 @@ void VendingMachine:: interface()
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
 
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
+
 			double change = moneyCalc(Location, money);
 
 			cout << "Here is your change: " << to_string(change) << " Enjoy your " << B1.Name << endl;
@@ -347,6 +385,14 @@ void VendingMachine:: interface()
 		{
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
 
 			double change = moneyCalc(Location, money);
 
@@ -360,6 +406,14 @@ void VendingMachine:: interface()
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
 
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
+
 			double change = moneyCalc(Location, money);
 
 			cout << "Here is your change: " << to_string(change) << " Enjoy your " << B3.Name << endl;
@@ -371,6 +425,14 @@ void VendingMachine:: interface()
 		{
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
 
 			double change = moneyCalc(Location, money);
 
@@ -384,6 +446,14 @@ void VendingMachine:: interface()
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
 
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
+
 			double change = moneyCalc(Location, money);
 
 			cout << "Here is your change: " << to_string(change) << " Enjoy your " << C2.Name << endl;
@@ -395,6 +465,14 @@ void VendingMachine:: interface()
 		{
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
 
 			double change = moneyCalc(Location, money);
 
@@ -408,6 +486,14 @@ void VendingMachine:: interface()
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
 
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
+
 			double change = moneyCalc(Location, money);
 
 			cout << "Here is your change: " << to_string(change) << " Enjoy your " << D1.Name << endl;
@@ -419,6 +505,14 @@ void VendingMachine:: interface()
 		{
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
 
 			double change = moneyCalc(Location, money);
 
@@ -432,6 +526,14 @@ void VendingMachine:: interface()
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
 
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
+
 			double change = moneyCalc(Location, money);
 
 			cout << "Here is your change: " << to_string(change) << " Enjoy your " << D3.Name << endl;
@@ -443,6 +545,14 @@ void VendingMachine:: interface()
 		{
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
+
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
 
 			double change = moneyCalc(Location, money);
 
@@ -456,6 +566,14 @@ void VendingMachine:: interface()
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
 
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
+
 			double change = moneyCalc(Location, money);
 
 			cout << "Here is your change: " << to_string(change) << " Enjoy your " << E2.Name << endl;
@@ -468,6 +586,14 @@ void VendingMachine:: interface()
 			cout << "Please insert money: ";
 			cin >> money; // if A1 is the input, their inserted money becomes the original value
 
+			while (!cin)
+			{
+				cout << "\nPlease input a number: " << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> money;
+			}
+
 			double change = moneyCalc(Location, money);
 
 			cout << "Here is your change: " << to_string(change) << " Enjoy your " << E3.Name << endl;
@@ -479,6 +605,7 @@ void VendingMachine:: interface()
 		{
 			cout << "\nThis input is Invalid :( .Please type in a character (A-E) followed by a number (1-3): ";
 			cin >> Location; // reasigning the string location
+			check = keepRunning(again);
 		}
 
 		if (check)
